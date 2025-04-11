@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: ingressJobs
+
+  datasource:
+    url: jdbc:postgresql://localhost:5438/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+    show-sql: true
+    open-in-view: false
+  liquibase:
+    default-schema: public
+
+server:
+  servlet:
+    context-path: /v1/job-portal
+
+
+jwt:
+  secret-key: ${JWT_SECRET_KEY:QWRlbVFhZmFybGlpMTIzQXV0b1RyYWRlU2VjcmV0S2V5}

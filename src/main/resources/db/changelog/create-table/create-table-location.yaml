@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      author: adem
+      id: 2024-05-10-02
+      changes:
+        - createTable:
+            tableName: location
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: country
+                  type: varchar
+              - column:
+                  name: street
+                  type: varchar
+              - column:
+                  name: city
+                  type: varchar
+              - column:
+                  name: postal_code
+                  type: int
+              - column:
+                  name: work_type
+                  type: varchar

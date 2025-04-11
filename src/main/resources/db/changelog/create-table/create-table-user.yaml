@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-05-10-03
+      author: adem
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar
+              - column:
+                  name: surname
+                  type: varchar
+              - column:
+                  name: email
+                  type: varchar
+              - column:
+                  name: password
+                  type: varchar
+              - column:
+                  name: phone_number
+                  type: varchar
+              - column:
+                  name: account_non_expired
+                  type: boolean
+              - column:
+                  name: account_non_locked
+                  type: boolean
+              - column:
+                  name: credentials_non_expired
+                  type: boolean
+              - column:
+                  name: enabled
+                  type: boolean
+              - column:
+                  name: role
+                  type: varchar
+

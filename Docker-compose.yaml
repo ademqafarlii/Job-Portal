@@ -1,0 +1,19 @@
+services:
+  postgres:
+    container_name: job-portal
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    ports:
+      - "5438:5432"
+
+volumes:
+  postgres-db-volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data

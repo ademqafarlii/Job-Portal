@@ -1,0 +1,14 @@
+databaseChangeLog:
+
+
+  ## CREATE TABLE
+  - include:
+      file: db/changelog/create-table/create-table-location.yaml
+  - include:
+      file: db/changelog/create-table/create-table-job.yaml
+  - include:
+      file: db/changelog/create-table/create-table-user.yaml
+
+
+
+
